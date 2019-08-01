@@ -38,3 +38,6 @@ session optional pam_exec.so /path/to/your/cloned/repo/telegram-ssh-login-notifi
 5. `sudo chmod +x /path/to/your/cloned/repo/telegram-ssh-login-notification/script.sh`
 6. Not mandatory, but why not: `sudo service ssh restart` or `sudo systemctl restart sshd` or `sudo systemctl restart ssh`
 
+### Thanks to
+[This guy, for the basic script](https://8192.one/post/ssh_login_notification_withtelegram/)
+[Alberto Xamin](https://github.com/albertoxamin) for sending me the link and helping me with the code.
