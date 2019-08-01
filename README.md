@@ -25,6 +25,7 @@ Current chat ID: XXXXXXXXX
 1. Check your `/etc/ssh/sshd_config`: `UsePAM yes` it's mandatory.
 2. `git clone https://github.com/Matteounitn/telegram-ssh-login-notification.git`
 3. `cd telegram-ssh-login-notification` and here `nano script.sh`
+
 **HERE you HAVE TO SET:**
 ```
 USERID="<YOUR-ID>"
