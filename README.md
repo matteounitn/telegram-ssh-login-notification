@@ -36,7 +36,7 @@ KEY="<API-KEY-OF-YOUR-BOT>"
 ```
 session optional pam_exec.so /path/to/your/cloned/repo/telegram-ssh-login-notification/script.sh
 ```
-5. `sudo chmod +x /path/to/your/cloned/repo/telegram-ssh-login-notification/script.sh`
+5. `sudo chmod a+x /path/to/your/cloned/repo/telegram-ssh-login-notification/script.sh`
 6. Not mandatory, but why not: `sudo service ssh restart` or `sudo systemctl restart sshd` or `sudo systemctl restart ssh`
 
 ### Thanks to
