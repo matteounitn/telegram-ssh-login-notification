@@ -18,7 +18,7 @@ CITY=$(cat $TMPFILE | sed -n 's/^  "city":[[:space:]]*//p' | sed 's/"//g') #Clie
 REGION=$(cat $TMPFILE | sed -n 's/^  "region":[[:space:]]*//p' | sed 's/"//g')
 COUNTRY=$(cat $TMPFILE | sed -n 's/^  "country":[[:space:]]*//p' | sed 's/"//g')
 ORG=$(cat $TMPFILE | sed -n 's/^  "org":[[:space:]]*//p' | sed 's/"//g')
-TEXT="$DATE_EXEC: ${USER} logged $WHAT to $HOSTNAME ($IPADDR) %0AFrom  $IP  %0A$ORG  %0A$CITY  %0A$REGION  %0A$COUNTRY"
+TEXT="$DATE_EXEC: $PAM_USER logged $WHAT to $HOSTNAME ($IPADDR) %0AFrom  $IP  %0A$ORG  %0A$CITY  %0A$REGION  %0A$COUNTRY"
 curl -s --max-time $TIMEOUT -d "chat_id=$USERID&disable_web_page_preview=1&text=$TEXT" $URL>/dev/null
 rm $TMPFILE #clean up after
 fi
