@@ -1,4 +1,6 @@
 # telegram-ssh-login-notification
+![security level](https://img.shields.io/badge/Security%20Level-alert-yellow)
+
 A simple script to check whenever a user log in or log out from your system.
 
 Based on [this script](https://8192.one/post/ssh_login_notification_withtelegram/) but fixed, using only PAM.
@@ -32,12 +34,12 @@ Current chat ID: XXXXXXXXX
 USERID="<YOUR-ID>"
 KEY="<API-KEY-OF-YOUR-BOT>" 
 ```
-4. `sudo nano /etc/pam.d/sshd` and add **at the end of the file** 
+4. `sudo nano /etc/pam.d/sshd` and add the following snippet **at the end of the file** 
 ```
 session optional pam_exec.so /path/to/your/cloned/repo/telegram-ssh-login-notification/script.sh
 ```
 5. `sudo chmod a+x /path/to/your/cloned/repo/telegram-ssh-login-notification/script.sh`
-6. Not mandatory, but why not: `sudo service ssh restart` or `sudo systemctl restart sshd` or `sudo systemctl restart ssh`
+6. Not mandatory, but reccomended: `sudo service ssh restart` or `sudo systemctl restart sshd` or `sudo systemctl restart ssh`
 
 ### Thanks to
 [This guy, for the basic script](https://8192.one/post/ssh_login_notification_withtelegram/)
